@@ -1,14 +1,14 @@
  //setting the variables
-var x = document.getElementById('map');
-var y = navigator.geolocation;
+var noLoc = document.getElementById('map');
+var loc = navigator.geolocation;
 var path = [];
 
 //get the coordinates and update
 function getLocation() {
-	if (y) {
-		y.watchPosition(showPosition);
+	if (loc) {
+		loc.watchPosition(showPosition);
 	} else {
-		x.innerHTML = "Geolocation is not supported by this browser.";
+		noLoc.innerHTML = "Geolocation is not supported by this browser.";
 	}
 }
 
@@ -23,8 +23,6 @@ function showPosition(position) {
 	latlon = new google.maps.LatLng(lat,lon)
 	path.push(latlon);
 	mapholder = document.getElementById('mapholder')
-	mapholder.style.height = '500px';
-	mapholder.style.width = '1000px';
 
 	//map settings
 	var myOptions = {
