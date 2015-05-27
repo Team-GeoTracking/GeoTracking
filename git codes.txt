@@ -36,6 +36,10 @@ Note: GitHub for Windows users should use the command git remote set-url origin 
 
 ################### CODES #######################
 
+Delete remote origin
+
+$ git remote rm origin
+
 Clone an existing repository in GitHub
 
 $ git clone https://github.com/*.git
