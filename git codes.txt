@@ -140,3 +140,7 @@ $ git config branch.master.rebase true
 Config option to always rebase when pulling
 
 $ git config --global branch.autosetuprebase always
+
+Temporarily stores passwords (timeout is in seconds)
+
+$ git config credential.helper 'cache --timeout=300'
